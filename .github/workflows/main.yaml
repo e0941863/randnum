@@ -39,5 +39,5 @@ jobs:
       with: 
         username: e0941863
         text: "${{secrets.SLACK_MSG}} \nRepo: ${{ github.repositoryUrl }}\nImage name: e0941863/randnum:${{github.ref_name}}\nImage url: https://hub.docker.com/repository/docker/e0941863/randnum"        
-        webhook_url: https://hooks.slack.com/services/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
+        webhook_url: https://hooks.slack.com/services/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
        
