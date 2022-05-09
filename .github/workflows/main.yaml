@@ -39,7 +39,7 @@ jobs:
       with: 
         payload:
         {
-          "text": "${{secrets.SLACK_MSG}} \nRepo: ${{ github.repositoryUrl }}\nImage name: ${{ secrets.DOCKERHUB_USERNAME }}/randimg:${{github.ref_name}}\nImage url: https://hub.docker.com/repository/docker/e0941863/randnum"
+          "text": "${{secrets.SLACK_MSG}} \nRepo: ${{ github.repositoryUrl }}\nImage name: e0941863/randnum:${{github.ref_name}}\nImage url: https://hub.docker.com/repository/docker/e0941863/randnum"
         } 
       env:
         SSLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
