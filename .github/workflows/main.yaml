@@ -33,14 +33,11 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/randimg:${{ github.ref_name }}
 
-    #https://github.com/marketplace/actions/slack-send
-    - name: end custom JSON data to Slack workflow
-      uses: slackapi/slack-github-action@v1.18.0
+    #https://github.com/marketplace/actions/slack-webhook
+    - name: send message to slack
+      uses: bluenovaio/action-slack@main 
       with: 
-        payload: |
-          {
-            "text": "${{secrets.SLACK_MSG}} \nRepo: ${{ github.repositoryUrl }}\nImage name: e0941863/randnum:${{github.ref_name}}\nImage url: https://hub.docker.com/repository/docker/e0941863/randnum"  
-          }       
-      env:
-        SSLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
-        SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+        username: e0941863
+        text: "${{secrets.SLACK_MSG}} \nRepo: ${{ github.repositoryUrl }}\nImage name: e0941863/randnum:${{github.ref_name}}\nImage url: https://hub.docker.com/repository/docker/e0941863/randnum"        
+        webhook_url: https://hooks.slack.com/services/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
+       
