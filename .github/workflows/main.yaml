@@ -37,10 +37,10 @@ jobs:
     - name: end custom JSON data to Slack workflow
       uses: slackapi/slack-github-action@v1.18.0
       with: 
-        payload:
-        {
-          "text": "${{secrets.SLACK_MSG}} \nRepo: ${{ github.repositoryUrl }}\nImage name: e0941863/randnum:${{github.ref_name}}\nImage url: https://hub.docker.com/repository/docker/e0941863/randnum"
-        } 
+        payload: |
+          {
+            "text": "${{secrets.SLACK_MSG}} \nRepo: ${{ github.repositoryUrl }}\nImage name: e0941863/randnum:${{github.ref_name}}\nImage url: https://hub.docker.com/repository/docker/e0941863/randnum"  
+          }       
       env:
         SSLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
