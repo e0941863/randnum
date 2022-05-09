@@ -42,5 +42,5 @@ jobs:
             "text": "${{secrets.SLACK_MSG}} \nRepo: ${{ github.repositoryUrl }}\nImage name: e0941863/randnum:${{github.ref_name}}\nImage url: https://hub.docker.com/repository/docker/e0941863/randnum"  
           }       
       env:
-        SSLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        SSLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
         SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
