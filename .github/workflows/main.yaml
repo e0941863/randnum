@@ -31,7 +31,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/randimg:${{ github.ref_name }}
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/randnum:${{ github.ref_name }}
 
     #https://github.com/marketplace/actions/slack-webhook
     - name: send message to slack
