@@ -3,7 +3,7 @@ on:
   release:
     types: [published]
     tags: 
-    -v1.*
+    - v1.*
 jobs:
   test_and_upload:
     runs-on: ubuntu-latest
